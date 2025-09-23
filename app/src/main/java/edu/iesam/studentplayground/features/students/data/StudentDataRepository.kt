@@ -16,11 +16,6 @@ class StudentDataRepository(
         memLocalDataSource.save(student)
     }
 
-    override fun create(student: Student) {
-        memLocalDataSource.create(student)
-    }
-
-
     override fun getAll() {
         memLocalDataSource.getAll()
     }
