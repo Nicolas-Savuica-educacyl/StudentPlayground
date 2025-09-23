@@ -15,4 +15,21 @@ class StudentDataRepository(
     override fun save(student: Student) {
         memLocalDataSource.save(student)
     }
+
+    override fun create(student: Student) {
+        memLocalDataSource.create(student)
+    }
+
+
+    override fun getAll() {
+        memLocalDataSource.getAll()
+    }
+
+    override fun update(student: Student) {
+        memLocalDataSource.update(student)
+    }
+
+    override fun delete(id: String) {
+        memLocalDataSource.delete(id)
+    }
 }

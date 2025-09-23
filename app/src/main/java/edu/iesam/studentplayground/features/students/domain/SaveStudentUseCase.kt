@@ -6,4 +6,6 @@ class SaveStudentUseCase(val studentRepository: StudentRepository) {
         studentRepository.save(student)
     }
 
+
+
 }

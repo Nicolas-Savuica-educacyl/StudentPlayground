@@ -27,7 +27,7 @@ class StudentActivity : AppCompatActivity() {
         initStudents()
     }
 
-    fun initStudents(){
+    fun initStudents() {
         val xml = StudentXmlLocalDataSource()
         val mem = StudentMemLocalDataSource()
         val api = StudentApiRemoteDataSource()
