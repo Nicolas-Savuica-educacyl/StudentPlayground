@@ -9,4 +9,7 @@ class StudentViewModel(private val saveStudentUseCase: SaveStudentUseCase) : Vie
     fun saveClicked(exp: String, name: String){
         saveStudentUseCase.invoke(Student(exp, name))
     }
+
+
+
 }
