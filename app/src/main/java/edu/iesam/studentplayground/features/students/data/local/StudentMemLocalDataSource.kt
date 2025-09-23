@@ -11,19 +11,29 @@ class StudentMemLocalDataSource {
         dataSource.put(student.exp, student)
     }
 
-     fun create(student: Student) {
-        TODO("Not yet implemented")
+    fun create(student: Student): Boolean {
+        return if (!dataSource.containsKey(student.exp)) {
+            dataSource[student.exp] = student
+            true
+        } else {
+            false
+        }
     }
 
-     fun getAll() {
-        TODO("Not yet implemented")
+    fun getAll(): List<Student> {
+        return dataSource.values.toList()
     }
 
-     fun update(student: Student) {
-        TODO("Not yet implemented")
+    fun update(student: Student): Boolean {
+        return if (dataSource.containsKey(student.exp)) {
+            dataSource[student.exp] = student
+            true
+        } else {
+            false
+        }
     }
 
-     fun delete(id: String) {
-        TODO("Not yet implemented")
+    fun delete(id: String): Boolean {
+        return dataSource.remove(id) != null
     }
 }
